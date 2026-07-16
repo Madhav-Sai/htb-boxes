@@ -21,3 +21,23 @@ peas*
 
 # Logs
 *.log
+# Secrets
+*.ccache
+*.kirbi
+*.key
+*.pfx
+*.pem
+*.crt
+
+# Firefox credentials
+key4.db
+logins.json
+
+# Credentials
+passwords.txt
+hashes*
+*.kdbx
+
+# SSH keys
+id_rsa
+id_ed25519
