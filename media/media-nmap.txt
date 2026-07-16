@@ -1,0 +1,38 @@
+# Nmap 7.99 scan initiated Sat May 30 00:45:31 2026 as: /usr/lib/nmap/nmap --privileged -sV -A -oN media-nmap.txt 10.129.234.67
+Nmap scan report for media.htb (10.129.234.67)
+Host is up (0.17s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+22/tcp   open  ssh           OpenSSH for_Windows_9.5 (protocol 2.0)
+80/tcp   open  http          Apache httpd 2.4.56 ((Win64) OpenSSL/1.1.1t PHP/8.1.17)
+|_http-title: ProMotion Studio
+|_http-server-header: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.1.17
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+|_ssl-date: 2026-05-29T19:16:52+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=MEDIA
+| Not valid before: 2026-05-28T19:12:40
+|_Not valid after:  2026-11-27T19:12:40
+| rdp-ntlm-info: 
+|   Target_Name: MEDIA
+|   NetBIOS_Domain_Name: MEDIA
+|   NetBIOS_Computer_Name: MEDIA
+|   DNS_Domain_Name: MEDIA
+|   DNS_Computer_Name: MEDIA
+|   Product_Version: 10.0.20348
+|_  System_Time: 2026-05-29T19:15:58+00:00
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2022|10|11|2012|2016 (89%)
+OS CPE: cpe:/o:microsoft:windows_server_2022 cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_11 cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_server_2016
+Aggressive OS guesses: Microsoft Windows Server 2022 (89%), Microsoft Windows 10 1703 or Windows 11 21H2 - 23H2 (85%), Microsoft Windows Server 2012 R2 (85%), Microsoft Windows Server 2016 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT       ADDRESS
+1   169.76 ms 10.10.14.1
+2   169.85 ms media.htb (10.129.234.67)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat May 30 00:47:00 2026 -- 1 IP address (1 host up) scanned in 89.12 seconds

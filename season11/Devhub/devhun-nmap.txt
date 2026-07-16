@@ -1,0 +1,1 @@
+# Nmap 7.99 scan initiated Thu Jun  4 15:29:56 2026 as: /usr/lib/nmap/nmap --privileged -p- --min-rate=2000 -sV -A -oN devhun-nmap.txt 10.129.245.216

@@ -1,0 +1,41 @@
+# Nmap 7.99 scan initiated Sun May 17 19:45:43 2026 as: /usr/lib/nmap/nmap --privileged -A -sV -oN 10.129.34.126-nmap.txt 10.129.34.126
+Nmap scan report for 10.129.34.126
+Host is up (0.17s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT      STATE SERVICE      VERSION
+80/tcp    open  http         Microsoft IIS httpd 10.0
+|_http-title: Ask Jeeves
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+135/tcp   open  msrpc        Microsoft Windows RPC
+445/tcp   open  microsoft-ds Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+50000/tcp open  http         Jetty 9.4.z-SNAPSHOT
+|_http-title: Error 404 Not Found
+|_http-server-header: Jetty(9.4.z-SNAPSHOT)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Microsoft Windows 7 or Windows Server 2008 R2 (91%), Microsoft Windows 10 1607 (89%), Microsoft Windows Server 2008 R2 (89%), Microsoft Windows 8.1 Update 1 (86%), Microsoft Windows Phone 7.5 or 8.0 (86%), Microsoft Windows Vista or Windows 7 (86%), Microsoft Windows Server 2008 R2 or Windows 7 SP1 (85%), Microsoft Windows Server 2012 R2 (85%), Microsoft Windows Server 2016 (85%), Microsoft Windows 10 1703 or Windows 11 21H2 - 23H2 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: Host: JEEVES; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2026-05-17T19:16:08
+|_  start_date: 2026-05-17T17:53:30
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_clock-skew: mean: 4h59m58s, deviation: 0s, median: 4h59m57s
+
+TRACEROUTE (using port 135/tcp)
+HOP RTT       ADDRESS
+1   171.01 ms 10.10.14.1
+2   171.18 ms 10.129.34.126
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun May 17 19:46:47 2026 -- 1 IP address (1 host up) scanned in 64.29 seconds

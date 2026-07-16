@@ -1,0 +1,36 @@
+Administrator
+Guest
+krbtgt
+Domain Admins
+Domain Users
+Domain Guests
+Domain Computers
+Domain Controllers
+Cert Publishers
+Schema Admins
+Enterprise Admins
+Group Policy Creator Owners
+Read-only Domain Controllers
+Cloneable Domain Controllers
+Protected Users
+Key Admins
+Enterprise Key Admins
+RAS and IAS Servers
+Allowed RODC Password Replication Group
+Denied RODC Password Replication Group
+SQLServer2005SQLBrowserUser$WIN-Q13O908QBPG
+DC$
+FS01$
+Christine.Flanders
+Marie.Curie
+Helen.Frost
+Michael.Pontiac
+Mallory.Roberts
+James.Dinkleberg
+Helpdesk
+IT
+Finance
+DnsAdmins
+DnsUpdateProxy
+Ryan.Cooper
+sql_svc

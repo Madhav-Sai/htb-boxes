@@ -1,0 +1,107 @@
+# Nmap 7.99 scan initiated Sun May 24 00:36:54 2026 as: /usr/lib/nmap/nmap --privileged -sV -A -oN 10.129.3.204.txt -vv 10.129.3.204
+Nmap scan report for reactor.htb (10.129.3.204)
+Host is up, received reset ttl 63 (0.17s latency).
+Scanned at 2026-05-24 00:36:55 IST for 30s
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 63 OpenSSH 9.6p1 Ubuntu 3ubuntu13.16 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 ce:fd:0d:82:c0:23:ed:6e:4b:ea:13:fa:4f:ea:ef:b7 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIoh32XcLYi0Kdad12SajqVyUVXfkDPaB7zZCDCMIJc+fv8JUJwyQRoqX/91+p6uD75Ggdp4VNzA7WasIkyo/4U=
+|   256 f8:44:c6:46:58:7a:39:21:ef:16:44:e9:58:c2:f3:62 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPws9RyzoCW2cXzOFxeZCCt8rWcNu2umX2kqLLK6T+7H
+3000/tcp open  ppp?    syn-ack ttl 63
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding
+|     x-nextjs-cache: HIT
+|     x-nextjs-prerender: 1
+|     x-nextjs-stale-time: 4294967294
+|     X-Powered-By: Next.js
+|     Cache-Control: s-maxage=31536000, 
+|     ETag: "p02u6gnhufd8t"
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 17175
+|     Date: Sat, 23 May 2026 19:07:08 GMT
+|     Connection: close
+|     <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/414e1be982bc8557.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-db0a529a99835594.js"/><script src="/_next/static/chunks/4bd1b696-80bcaf75e1b4285e.js" async=""></script><script src="/_next/static/chunks/517-d083b552e04dead1.js" async=""></script><script s
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch
+|     Allow: GET
+|     Allow: HEAD
+|     Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+|     Date: Sat, 23 May 2026 19:07:09 GMT
+|     Connection: close
+|   Help, NCP: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch
+|     Allow: GET
+|     Allow: HEAD
+|     Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+|     Date: Sat, 23 May 2026 19:07:10 GMT
+|_    Connection: close
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3000-TCP:V=7.99%I=7%D=5/24%Time=6A11FADC%P=aarch64-unknown-linux-gn
+SF:u%r(GetRequest,2CD8,"HTTP/1\.1\x20200\x20OK\r\nVary:\x20RSC,\x20Next-Ro
+SF:uter-State-Tree,\x20Next-Router-Prefetch,\x20Next-Router-Segment-Prefet
+SF:ch,\x20Accept-Encoding\r\nx-nextjs-cache:\x20HIT\r\nx-nextjs-prerender:
+SF:\x201\r\nx-nextjs-stale-time:\x204294967294\r\nX-Powered-By:\x20Next\.j
+SF:s\r\nCache-Control:\x20s-maxage=31536000,\x20\r\nETag:\x20\"p02u6gnhufd
+SF:8t\"\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:
+SF:\x2017175\r\nDate:\x20Sat,\x2023\x20May\x202026\x2019:07:08\x20GMT\r\nC
+SF:onnection:\x20close\r\n\r\n<!DOCTYPE\x20html><html\x20lang=\"en\"><head
+SF:><meta\x20charSet=\"utf-8\"/><meta\x20name=\"viewport\"\x20content=\"wi
+SF:dth=device-width,\x20initial-scale=1\"/><link\x20rel=\"stylesheet\"\x20
+SF:href=\"/_next/static/css/414e1be982bc8557\.css\"\x20data-precedence=\"n
+SF:ext\"/><link\x20rel=\"preload\"\x20as=\"script\"\x20fetchPriority=\"low
+SF:\"\x20href=\"/_next/static/chunks/webpack-db0a529a99835594\.js\"/><scri
+SF:pt\x20src=\"/_next/static/chunks/4bd1b696-80bcaf75e1b4285e\.js\"\x20asy
+SF:nc=\"\"></script><script\x20src=\"/_next/static/chunks/517-d083b552e04d
+SF:ead1\.js\"\x20async=\"\"></script><script\x20s")%r(Help,2F,"HTTP/1\.1\x
+SF:20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(NCP,2F,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(HTT
+SF:POptions,10C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nvary:\x20RSC,\x20Ne
+SF:xt-Router-State-Tree,\x20Next-Router-Prefetch,\x20Next-Router-Segment-P
+SF:refetch\r\nAllow:\x20GET\r\nAllow:\x20HEAD\r\nCache-Control:\x20private
+SF:,\x20no-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r\nDate:\x
+SF:20Sat,\x2023\x20May\x202026\x2019:07:09\x20GMT\r\nConnection:\x20close\
+SF:r\n\r\n")%r(RTSPRequest,10C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nvary
+SF::\x20RSC,\x20Next-Router-State-Tree,\x20Next-Router-Prefetch,\x20Next-R
+SF:outer-Segment-Prefetch\r\nAllow:\x20GET\r\nAllow:\x20HEAD\r\nCache-Cont
+SF:rol:\x20private,\x20no-cache,\x20no-store,\x20max-age=0,\x20must-revali
+SF:date\r\nDate:\x20Sat,\x2023\x20May\x202026\x2019:07:10\x20GMT\r\nConnec
+SF:tion:\x20close\r\n\r\n");
+Device type: general purpose
+Running: Linux 5.X
+OS CPE: cpe:/o:linux:linux_kernel:5
+OS details: Linux 5.0 - 5.14
+TCP/IP fingerprint:
+OS:SCAN(V=7.99%E=4%D=5/24%OT=22%CT=1%CU=39093%PV=Y%DS=2%DC=T%G=Y%TM=6A11FAE
+OS:D%P=aarch64-unknown-linux-gnu)SEQ(SP=FA%GCD=1%ISR=10B%TI=Z%CI=Z%II=I%TS=
+OS:A)OPS(O1=M552ST11NW7%O2=M552ST11NW7%O3=M552NNT11NW7%O4=M552ST11NW7%O5=M5
+OS:52ST11NW7%O6=M552ST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE8
+OS:8)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M552NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S
+OS:+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=
+OS:)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%
+OS:A=Z%F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIP
+OS:CK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 42.645 days (since Sat Apr 11 09:08:55 2026)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=250 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   176.75 ms 10.10.14.1
+2   176.89 ms reactor.htb (10.129.3.204)
+
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun May 24 00:37:25 2026 -- 1 IP address (1 host up) scanned in 31.08 seconds

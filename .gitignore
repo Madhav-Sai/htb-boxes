@@ -1,0 +1,23 @@
+# Windows binaries
+*.exe
+*.dll
+
+# Archives
+*.zip
+*.7z
+*.rar
+*.tar.gz
+
+# Linux binaries
+linpeas*
+winpeas*
+peas*
+
+# VPN
+*.ovpn
+
+# Database
+*.kdbx
+
+# Logs
+*.log

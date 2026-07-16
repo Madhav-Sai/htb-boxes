@@ -1,0 +1,26 @@
+# Nmap 7.99 scan initiated Sun Jun 21 19:25:37 2026 as: /usr/lib/nmap/nmap --privileged -sV -A -oN nimbus.nmap 10.129.3.2
+Nmap scan report for 10.129.3.2
+Host is up (0.052s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.16 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 eb:ab:8f:be:99:02:0b:3e:c4:1c:83:b2:66:2f:17:13 (ECDSA)
+|_  256 c1:69:ab:84:f3:88:8b:b3:8a:ae:e2:28:35:54:35:0b (ED25519)
+80/tcp open  http    nginx 1.24.0 (Ubuntu)
+|_http-title: Did not follow redirect to http://nimbus.htb/
+|_http-server-header: nginx/1.24.0 (Ubuntu)
+Device type: general purpose|router
+Running: Linux 4.X|5.X, MikroTik RouterOS 7.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3
+OS details: Linux 4.15 - 5.19, MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 1723/tcp)
+HOP RTT      ADDRESS
+1   52.38 ms 10.10.14.1
+2   52.52 ms 10.129.3.2
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jun 21 19:25:50 2026 -- 1 IP address (1 host up) scanned in 12.93 seconds

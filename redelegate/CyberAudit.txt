@@ -1,0 +1,15 @@
+OCTOBER 2024 AUDIT FINDINGS
+
+[!] CyberSecurity Audit findings:
+
+1) Weak User Passwords
+2) Excessive Privilege assigned to users
+3) Unused Active Directory objects
+4) Dangerous Active Directory ACLs
+
+[*] Remediation steps:
+
+1) Prompt users to change their passwords: DONE
+2) Check privileges for all users and remove high privileges: DONE
+3) Remove unused objects in the domain: IN PROGRESS
+4) Recheck ACLs: IN PROGRESS

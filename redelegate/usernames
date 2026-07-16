@@ -1,0 +1,36 @@
+[*] 10.129.234.50:1433 -  - WIN-Q13O908QBPG\Administrator
+[*] 10.129.234.50:1433 -  - REDELEGATE\Guest
+[*] 10.129.234.50:1433 -  - REDELEGATE\krbtgt
+[*] 10.129.234.50:1433 -  - REDELEGATE\Domain Admins
+[*] 10.129.234.50:1433 -  - REDELEGATE\Domain Users
+[*] 10.129.234.50:1433 -  - REDELEGATE\Domain Guests
+[*] 10.129.234.50:1433 -  - REDELEGATE\Domain Computers
+[*] 10.129.234.50:1433 -  - REDELEGATE\Domain Controllers
+[*] 10.129.234.50:1433 -  - REDELEGATE\Cert Publishers
+[*] 10.129.234.50:1433 -  - REDELEGATE\Schema Admins
+[*] 10.129.234.50:1433 -  - REDELEGATE\Enterprise Admins
+[*] 10.129.234.50:1433 -  - REDELEGATE\Group Policy Creator Owners
+[*] 10.129.234.50:1433 -  - REDELEGATE\Read-only Domain Controllers
+[*] 10.129.234.50:1433 -  - REDELEGATE\Cloneable Domain Controllers
+[*] 10.129.234.50:1433 -  - REDELEGATE\Protected Users
+[*] 10.129.234.50:1433 -  - REDELEGATE\Key Admins
+[*] 10.129.234.50:1433 -  - REDELEGATE\Enterprise Key Admins
+[*] 10.129.234.50:1433 -  - REDELEGATE\RAS and IAS Servers
+[*] 10.129.234.50:1433 -  - REDELEGATE\Allowed RODC Password Replication Group
+[*] 10.129.234.50:1433 -  - REDELEGATE\Denied RODC Password Replication Group
+[*] 10.129.234.50:1433 -  - REDELEGATE\SQLServer2005SQLBrowserUser$WIN-Q13O908QBPG
+[*] 10.129.234.50:1433 -  - REDELEGATE\DC$
+[*] 10.129.234.50:1433 -  - REDELEGATE\FS01$
+[*] 10.129.234.50:1433 -  - REDELEGATE\Christine.Flanders
+[*] 10.129.234.50:1433 -  - REDELEGATE\Marie.Curie
+[*] 10.129.234.50:1433 -  - REDELEGATE\Helen.Frost
+[*] 10.129.234.50:1433 -  - REDELEGATE\Michael.Pontiac
+[*] 10.129.234.50:1433 -  - REDELEGATE\Mallory.Roberts
+[*] 10.129.234.50:1433 -  - REDELEGATE\James.Dinkleberg
+[*] 10.129.234.50:1433 -  - REDELEGATE\Helpdesk
+[*] 10.129.234.50:1433 -  - REDELEGATE\IT
+[*] 10.129.234.50:1433 -  - REDELEGATE\Finance
+[*] 10.129.234.50:1433 -  - REDELEGATE\DnsAdmins
+[*] 10.129.234.50:1433 -  - REDELEGATE\DnsUpdateProxy
+[*] 10.129.234.50:1433 -  - REDELEGATE\Ryan.Cooper
+[*] 10.129.234.50:1433 -  - REDELEGATE\sql_svc

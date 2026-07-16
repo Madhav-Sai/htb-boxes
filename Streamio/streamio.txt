@@ -1,0 +1,1019 @@
+Configuration {
+    kind: "configuration",
+    wordlist: "/usr/share/seclists/Discovery/Web-Content/common.txt",
+    config: "/etc/feroxbuster/ferox-config.toml",
+    proxy: "",
+    replay_proxy: "",
+    server_certs: [],
+    client_cert: "",
+    client_key: "",
+    target_url: "https://streamio.htb/",
+    status_codes: [
+        100,
+        101,
+        102,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        226,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        307,
+        308,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        421,
+        422,
+        423,
+        424,
+        426,
+        428,
+        429,
+        431,
+        451,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        510,
+        511,
+        103,
+        425,
+    ],
+    replay_codes: [
+        100,
+        101,
+        102,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        226,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        307,
+        308,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        421,
+        422,
+        423,
+        424,
+        426,
+        428,
+        429,
+        431,
+        451,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        510,
+        511,
+        103,
+        425,
+    ],
+    filter_status: [],
+    client: Client {
+        accepts: Accepts,
+        proxies: [
+            Matcher,
+        ],
+        redirect_policy: "Policy(None)",
+        referer: true,
+        default_headers: {
+            "accept": "*/*",
+            "user-agent": "feroxbuster/2.13.1",
+        },
+        reqwest::config::RequestTimeout: 7s,
+    },
+    replay_client: None,
+    threads: 150,
+    timeout: 7,
+    verbosity: 0,
+    silent: false,
+    quiet: false,
+    output_level: Default,
+    auto_bail: false,
+    auto_tune: false,
+    requester_policy: Default,
+    json: false,
+    output: "streamio.txt",
+    debug_log: "",
+    user_agent: "feroxbuster/2.13.1",
+    random_agent: false,
+    redirects: false,
+    insecure: true,
+    extensions: [],
+    methods: [
+        "GET",
+    ],
+    data: [],
+    headers: {},
+    queries: [],
+    no_recursion: false,
+    extract_links: true,
+    add_slash: false,
+    stdin: false,
+    cached_stdin: [],
+    depth: 4,
+    scan_limit: 0,
+    parallel: 0,
+    rate_limit: 0,
+    filter_size: [],
+    filter_line_count: [],
+    filter_word_count: [],
+    filter_regex: [],
+    dont_filter: false,
+    resumed: false,
+    resume_from: "",
+    save_state: true,
+    time_limit: "",
+    filter_similar: [],
+    url_denylist: [],
+    regex_denylist: [],
+    scope: [
+        Url {
+            scheme: "https",
+            cannot_be_a_base: false,
+            username: "",
+            password: None,
+            host: Some(
+                Domain(
+                    "streamio.htb",
+                ),
+            ),
+            port: None,
+            path: "/",
+            query: None,
+            fragment: None,
+        },
+    ],
+    collect_extensions: false,
+    dont_collect: [
+        "woff2",
+        "woff",
+        "ttf",
+        "otf",
+        "eot",
+        "tif",
+        "tiff",
+        "ico",
+        "cur",
+        "bmp",
+        "webp",
+        "svg",
+        "png",
+        "jpg",
+        "jpeg",
+        "jfif",
+        "gif",
+        "avif",
+        "apng",
+        "pjpeg",
+        "pjp",
+        "mov",
+        "wav",
+        "mpg",
+        "mpeg",
+        "mp3",
+        "mp4",
+        "m4a",
+        "m4p",
+        "m4v",
+        "ogg",
+        "webm",
+        "ogv",
+        "oga",
+        "flac",
+        "aac",
+        "3gp",
+        "css",
+        "zip",
+        "xls",
+        "xml",
+        "gz",
+        "tgz",
+    ],
+    collect_backups: false,
+    backup_extensions: [
+        "~",
+        ".bak",
+        ".bak2",
+        ".old",
+        ".1",
+    ],
+    collect_words: false,
+    force_recursion: false,
+    update_app: false,
+    scan_dir_listings: false,
+    request_file: "",
+    protocol: "https",
+    limit_bars: 0,
+    unique: false,
+    response_size_limit: 4194304,
+}
+301      GET        2l       10w      150c https://streamio.htb/ADMIN => https://streamio.htb/ADMIN/
+200      GET      206l      430w     6434c https://streamio.htb/contact.php
+200      GET      395l      915w    13497c https://streamio.htb/index.php
+200      GET      101l      173w     1663c https://streamio.htb/css/responsive.css
+200      GET      367l     1995w   166220c https://streamio.htb/images/contact-img.png
+301      GET        2l       10w      150c https://streamio.htb/Admin => https://streamio.htb/Admin/
+200      GET      913l     5479w   420833c https://streamio.htb/images/about-img.png
+200      GET      111l      269w     4145c https://streamio.htb/login.php
+200      GET      863l     1698w    16966c https://streamio.htb/css/style.css
+200      GET       51l      213w    19329c https://streamio.htb/images/client.jpg
+200      GET      192l     1006w    82931c https://streamio.htb/images/icon.png
+200      GET        5l      374w    21257c https://streamio.htb/js/popper.min.js
+200      GET      231l      571w     7825c https://streamio.htb/about.php
+200      GET        2l     1276w    88145c https://streamio.htb/js/jquery-3.4.1.min.js
+200      GET      395l      915w    13497c https://streamio.htb/
+301      GET        2l       10w      151c https://streamio.htb/Images => https://streamio.htb/Images/
+301      GET        2l       10w      150c https://streamio.htb/admin => https://streamio.htb/admin/
+403      GET       29l       92w     1233c https://streamio.htb/images/
+403      GET       29l       92w     1233c https://streamio.htb/css/
+404      GET       40l      156w     1888c https://streamio.htb/aux
+403      GET       29l       92w     1233c https://streamio.htb/js/
+301      GET        2l       10w      157c https://streamio.htb/Admin/Images => https://streamio.htb/Admin/Images/
+301      GET        2l       10w      157c https://streamio.htb/ADMIN/Images => https://streamio.htb/ADMIN/Images/
+404      GET       40l      156w     1889c https://streamio.htb/com1
+404      GET       40l      156w     1889c https://streamio.htb/com2
+404      GET       40l      156w     1889c https://streamio.htb/com3
+404      GET       40l      156w     1889c https://streamio.htb/com4
+404      GET       40l      156w     1888c https://streamio.htb/con
+301      GET        2l       10w      157c https://streamio.htb/admin/Images => https://streamio.htb/admin/Images/
+301      GET        2l       10w      148c https://streamio.htb/css => https://streamio.htb/css/
+404      GET       40l      156w     1895c https://streamio.htb/images/aux
+404      GET       40l      156w     1894c https://streamio.htb/ADMIN/aux
+404      GET       40l      156w     1894c https://streamio.htb/Admin/aux
+404      GET       40l      156w     1892c https://streamio.htb/css/aux
+404      GET       40l      156w     1891c https://streamio.htb/js/aux
+404      GET       40l      156w     1895c https://streamio.htb/Images/aux
+404      GET       40l      156w     1896c https://streamio.htb/images/com4
+404      GET       40l      156w     1896c https://streamio.htb/images/com2
+404      GET       40l      156w     1896c https://streamio.htb/images/com3
+404      GET       40l      156w     1896c https://streamio.htb/images/com1
+404      GET       40l      156w     1895c https://streamio.htb/Admin/com1
+404      GET       40l      156w     1895c https://streamio.htb/Admin/com2
+404      GET       40l      156w     1895c https://streamio.htb/Admin/com4
+404      GET       40l      156w     1895c https://streamio.htb/Admin/com3
+404      GET       40l      156w     1893c https://streamio.htb/css/com3
+404      GET       40l      156w     1893c https://streamio.htb/css/com2
+404      GET       40l      156w     1893c https://streamio.htb/css/com1
+404      GET       40l      156w     1893c https://streamio.htb/css/com4
+404      GET       40l      156w     1895c https://streamio.htb/ADMIN/com2
+404      GET       40l      156w     1895c https://streamio.htb/ADMIN/com1
+404      GET       40l      156w     1895c https://streamio.htb/ADMIN/com4
+404      GET       40l      156w     1895c https://streamio.htb/ADMIN/com3
+404      GET       40l      156w     1894c https://streamio.htb/admin/aux
+404      GET       40l      156w     1892c https://streamio.htb/js/com4
+404      GET       40l      156w     1892c https://streamio.htb/js/com2
+404      GET       40l      156w     1892c https://streamio.htb/js/com3
+404      GET       40l      156w     1892c https://streamio.htb/js/com1
+404      GET       40l      156w     1896c https://streamio.htb/Images/com1
+404      GET       40l      156w     1896c https://streamio.htb/Images/com2
+404      GET       40l      156w     1896c https://streamio.htb/Images/com4
+404      GET       40l      156w     1896c https://streamio.htb/Images/com3
+200      GET        1l        7w     2054c https://streamio.htb/favicon.ico
+404      GET       40l      156w     1895c https://streamio.htb/images/con
+404      GET       40l      156w     1894c https://streamio.htb/ADMIN/con
+404      GET       40l      156w     1894c https://streamio.htb/Admin/con
+404      GET       40l      156w     1892c https://streamio.htb/css/con
+301      GET        2l       10w      150c https://streamio.htb/fonts => https://streamio.htb/fonts/
+404      GET       40l      156w     1891c https://streamio.htb/js/con
+404      GET       40l      156w     1895c https://streamio.htb/Images/con
+404      GET       40l      156w     1901c https://streamio.htb/Admin/Images/aux
+301      GET        2l       10w      154c https://streamio.htb/Admin/css => https://streamio.htb/Admin/css/
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/Images/aux
+301      GET        2l       10w      154c https://streamio.htb/ADMIN/css => https://streamio.htb/ADMIN/css/
+404      GET       40l      156w     1895c https://streamio.htb/admin/com3
+404      GET       40l      156w     1895c https://streamio.htb/admin/com4
+404      GET       40l      156w     1895c https://streamio.htb/admin/com1
+404      GET       40l      156w     1895c https://streamio.htb/admin/com2
+301      GET        2l       10w      151c https://streamio.htb/images => https://streamio.htb/images/
+404      GET       40l      156w     1894c https://streamio.htb/admin/con
+404      GET       40l      156w     1902c https://streamio.htb/Admin/Images/com2
+404      GET       40l      156w     1902c https://streamio.htb/Admin/Images/com3
+404      GET       40l      156w     1902c https://streamio.htb/Admin/Images/com1
+404      GET       40l      156w     1902c https://streamio.htb/Admin/Images/com4
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/Images/com4
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/Images/com3
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/Images/com1
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/Images/com2
+404      GET       40l      156w     1901c https://streamio.htb/admin/Images/aux
+301      GET        2l       10w      154c https://streamio.htb/admin/css => https://streamio.htb/admin/css/
+301      GET        2l       10w      147c https://streamio.htb/js => https://streamio.htb/js/
+404      GET       40l      156w     1901c https://streamio.htb/Admin/Images/con
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/Images/con
+404      GET       40l      156w     1889c https://streamio.htb/lpt1
+404      GET       40l      156w     1889c https://streamio.htb/lpt2
+301      GET        2l       10w      156c https://streamio.htb/ADMIN/fonts => https://streamio.htb/ADMIN/fonts/
+301      GET        2l       10w      156c https://streamio.htb/Admin/fonts => https://streamio.htb/Admin/fonts/
+404      GET       40l      156w     1902c https://streamio.htb/admin/Images/com2
+404      GET       40l      156w     1902c https://streamio.htb/admin/Images/com3
+404      GET       40l      156w     1902c https://streamio.htb/admin/Images/com1
+404      GET       40l      156w     1902c https://streamio.htb/admin/Images/com4
+403      GET        1l        1w       18c https://streamio.htb/Admin/index.php
+403      GET        1l        1w       18c https://streamio.htb/ADMIN/index.php
+404      GET       40l      156w     1901c https://streamio.htb/admin/Images/con
+301      GET        2l       10w      157c https://streamio.htb/Admin/images => https://streamio.htb/Admin/images/
+301      GET        2l       10w      157c https://streamio.htb/ADMIN/images => https://streamio.htb/ADMIN/images/
+404      GET       40l      156w     1888c https://streamio.htb/nul
+301      GET        2l       10w      156c https://streamio.htb/admin/fonts => https://streamio.htb/admin/fonts/
+301      GET        2l       10w      153c https://streamio.htb/Admin/js => https://streamio.htb/Admin/js/
+404      GET       40l      156w     1898c https://streamio.htb/Admin/css/aux
+301      GET        2l       10w      153c https://streamio.htb/ADMIN/js => https://streamio.htb/ADMIN/js/
+404      GET       40l      156w     1898c https://streamio.htb/ADMIN/css/aux
+404      GET       40l      156w     1894c https://streamio.htb/fonts/aux
+403      GET        1l        1w       18c https://streamio.htb/admin/index.php
+404      GET       40l      156w     1896c https://streamio.htb/images/lpt2
+404      GET       40l      156w     1896c https://streamio.htb/images/lpt1
+404      GET       40l      156w     1893c https://streamio.htb/css/lpt1
+404      GET       40l      156w     1893c https://streamio.htb/css/lpt2
+404      GET       40l      156w     1895c https://streamio.htb/ADMIN/lpt1
+404      GET       40l      156w     1895c https://streamio.htb/ADMIN/lpt2
+404      GET       40l      156w     1895c https://streamio.htb/Admin/lpt2
+404      GET       40l      156w     1895c https://streamio.htb/Admin/lpt1
+404      GET       40l      156w     1892c https://streamio.htb/js/lpt1
+404      GET       40l      156w     1892c https://streamio.htb/js/lpt2
+301      GET        2l       10w      157c https://streamio.htb/admin/images => https://streamio.htb/admin/images/
+404      GET       40l      156w     1896c https://streamio.htb/Images/lpt1
+404      GET       40l      156w     1896c https://streamio.htb/Images/lpt2
+404      GET       40l      156w     1888c https://streamio.htb/prn
+404      GET       40l      156w     1899c https://streamio.htb/Admin/css/com3
+404      GET       40l      156w     1899c https://streamio.htb/Admin/css/com4
+404      GET       40l      156w     1899c https://streamio.htb/Admin/css/com2
+404      GET       40l      156w     1899c https://streamio.htb/Admin/css/com1
+404      GET       40l      156w     1899c https://streamio.htb/ADMIN/css/com2
+404      GET       40l      156w     1899c https://streamio.htb/ADMIN/css/com1
+404      GET       40l      156w     1899c https://streamio.htb/ADMIN/css/com3
+404      GET       40l      156w     1899c https://streamio.htb/ADMIN/css/com4
+404      GET       40l      156w     1895c https://streamio.htb/fonts/com4
+404      GET       40l      156w     1895c https://streamio.htb/fonts/com1
+404      GET       40l      156w     1895c https://streamio.htb/fonts/com2
+404      GET       40l      156w     1895c https://streamio.htb/fonts/com3
+301      GET        2l       10w      153c https://streamio.htb/admin/js => https://streamio.htb/admin/js/
+404      GET       40l      156w     1898c https://streamio.htb/admin/css/aux
+404      GET       40l      156w     1895c https://streamio.htb/images/nul
+404      GET       40l      156w     1894c https://streamio.htb/ADMIN/nul
+404      GET       40l      156w     1894c https://streamio.htb/Admin/nul
+404      GET       40l      156w     1898c https://streamio.htb/Admin/css/con
+404      GET       40l      156w     1892c https://streamio.htb/css/nul
+404      GET       40l      156w     1898c https://streamio.htb/ADMIN/css/con
+404      GET       40l      156w     1894c https://streamio.htb/fonts/con
+404      GET       40l      156w     1891c https://streamio.htb/js/nul
+404      GET       40l      156w     1895c https://streamio.htb/admin/lpt1
+404      GET       40l      156w     1895c https://streamio.htb/admin/lpt2
+404      GET       40l      156w     1895c https://streamio.htb/Images/nul
+404      GET       40l      156w     1900c https://streamio.htb/ADMIN/fonts/aux
+404      GET       40l      156w     1900c https://streamio.htb/Admin/fonts/aux
+404      GET       40l      156w     1899c https://streamio.htb/admin/css/com3
+404      GET       40l      156w     1899c https://streamio.htb/admin/css/com1
+404      GET       40l      156w     1899c https://streamio.htb/admin/css/com2
+404      GET       40l      156w     1899c https://streamio.htb/admin/css/com4
+404      GET       40l      156w     1895c https://streamio.htb/images/prn
+404      GET       40l      156w     1902c https://streamio.htb/Admin/Images/lpt1
+404      GET       40l      156w     1902c https://streamio.htb/Admin/Images/lpt2
+404      GET       40l      156w     1892c https://streamio.htb/css/prn
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/Images/lpt1
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/Images/lpt2
+404      GET       40l      156w     1894c https://streamio.htb/Admin/prn
+404      GET       40l      156w     1894c https://streamio.htb/ADMIN/prn
+404      GET       40l      156w     1894c https://streamio.htb/admin/nul
+404      GET       40l      156w     1898c https://streamio.htb/admin/css/con
+404      GET       40l      156w     1891c https://streamio.htb/js/prn
+404      GET       40l      156w     1895c https://streamio.htb/Images/prn
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/fonts/com2
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/fonts/com4
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/fonts/com1
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/fonts/com3
+404      GET       40l      156w     1901c https://streamio.htb/Admin/fonts/com2
+404      GET       40l      156w     1901c https://streamio.htb/Admin/fonts/com1
+404      GET       40l      156w     1901c https://streamio.htb/Admin/fonts/com3
+404      GET       40l      156w     1901c https://streamio.htb/Admin/fonts/com4
+404      GET       40l      156w     1901c https://streamio.htb/Admin/images/aux
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/images/aux
+404      GET       40l      156w     1900c https://streamio.htb/admin/fonts/aux
+404      GET       40l      156w     1900c https://streamio.htb/ADMIN/fonts/con
+404      GET       40l      156w     1900c https://streamio.htb/Admin/fonts/con
+404      GET       40l      156w     1897c https://streamio.htb/Admin/js/aux
+404      GET       40l      156w     1901c https://streamio.htb/Admin/Images/nul
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/Images/nul
+404      GET       40l      156w     1897c https://streamio.htb/ADMIN/js/aux
+404      GET       40l      156w     1902c https://streamio.htb/admin/Images/lpt1
+404      GET       40l      156w     1902c https://streamio.htb/admin/Images/lpt2
+404      GET       40l      156w     1894c https://streamio.htb/admin/prn
+404      GET       40l      156w     1901c https://streamio.htb/admin/Images/nul
+404      GET       40l      156w     1901c https://streamio.htb/Admin/Images/prn
+404      GET       40l      156w     1898c https://streamio.htb/Admin/js/com1
+404      GET       40l      156w     1898c https://streamio.htb/Admin/js/com2
+404      GET       40l      156w     1898c https://streamio.htb/Admin/js/com4
+404      GET       40l      156w     1898c https://streamio.htb/Admin/js/com3
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/images/con
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/Images/prn
+404      GET       40l      156w     1898c https://streamio.htb/ADMIN/js/com2
+404      GET       40l      156w     1898c https://streamio.htb/ADMIN/js/com1
+404      GET       40l      156w     1898c https://streamio.htb/ADMIN/js/com3
+404      GET       40l      156w     1898c https://streamio.htb/ADMIN/js/com4
+404      GET       40l      156w     1900c https://streamio.htb/admin/fonts/con
+404      GET       40l      156w     1897c https://streamio.htb/admin/js/aux
+404      GET       40l      156w     1897c https://streamio.htb/Admin/js/con
+404      GET       40l      156w     1897c https://streamio.htb/ADMIN/js/con
+404      GET       40l      156w     1895c https://streamio.htb/fonts/lpt1
+404      GET       40l      156w     1895c https://streamio.htb/fonts/lpt2
+404      GET       40l      156w     1899c https://streamio.htb/Admin/css/lpt2
+404      GET       40l      156w     1901c https://streamio.htb/admin/images/con
+404      GET       40l      156w     1898c https://streamio.htb/admin/js/com2
+404      GET       40l      156w     1898c https://streamio.htb/admin/js/com1
+404      GET       40l      156w     1898c https://streamio.htb/admin/js/com3
+404      GET       40l      156w     1898c https://streamio.htb/admin/js/com4
+404      GET       40l      156w     1899c https://streamio.htb/Admin/css/lpt1
+404      GET       40l      156w     1901c https://streamio.htb/admin/Images/prn
+404      GET       40l      156w     1897c https://streamio.htb/admin/js/con
+404      GET       40l      156w     1899c https://streamio.htb/ADMIN/css/lpt1
+404      GET       40l      156w     1899c https://streamio.htb/ADMIN/css/lpt2
+404      GET       40l      156w     1898c https://streamio.htb/ADMIN/css/nul
+404      GET       40l      156w     1894c https://streamio.htb/fonts/nul
+404      GET       40l      156w     1898c https://streamio.htb/Admin/css/nul
+404      GET       40l      156w     1899c https://streamio.htb/admin/css/lpt1
+404      GET       40l      156w     1899c https://streamio.htb/admin/css/lpt2
+404      GET       40l      156w     1898c https://streamio.htb/admin/css/nul
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/fonts/lpt1
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/fonts/lpt2
+404      GET       40l      156w     1898c https://streamio.htb/Admin/css/prn
+404      GET       40l      156w     1901c https://streamio.htb/Admin/fonts/lpt1
+404      GET       40l      156w     1901c https://streamio.htb/Admin/fonts/lpt2
+404      GET       40l      156w     1898c https://streamio.htb/ADMIN/css/prn
+404      GET       40l      156w     1894c https://streamio.htb/fonts/prn
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/images/lpt1
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/images/lpt2
+404      GET       40l      156w     1901c https://streamio.htb/admin/fonts/lpt1
+404      GET       40l      156w     1901c https://streamio.htb/admin/fonts/lpt2
+404      GET       40l      156w     1900c https://streamio.htb/ADMIN/fonts/nul
+404      GET       40l      156w     1898c https://streamio.htb/Admin/js/lpt1
+404      GET       40l      156w     1898c https://streamio.htb/Admin/js/lpt2
+404      GET       40l      156w     1900c https://streamio.htb/Admin/fonts/nul
+404      GET       40l      156w     1902c https://streamio.htb/Admin/images/lpt1
+404      GET       40l      156w     1902c https://streamio.htb/Admin/images/lpt2
+404      GET       40l      156w     1898c https://streamio.htb/admin/css/prn
+404      GET       40l      156w     1898c https://streamio.htb/ADMIN/js/lpt1
+404      GET       40l      156w     1898c https://streamio.htb/ADMIN/js/lpt2
+404      GET       40l      156w     1902c https://streamio.htb/admin/images/lpt1
+404      GET       40l      156w     1902c https://streamio.htb/admin/images/lpt2
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/images/nul
+404      GET       40l      156w     1900c https://streamio.htb/admin/fonts/nul
+404      GET       40l      156w     1900c https://streamio.htb/ADMIN/fonts/prn
+404      GET       40l      156w     1900c https://streamio.htb/Admin/fonts/prn
+404      GET       40l      156w     1901c https://streamio.htb/Admin/images/nul
+404      GET       40l      156w     1897c https://streamio.htb/Admin/js/nul
+404      GET       40l      156w     1898c https://streamio.htb/admin/js/lpt1
+404      GET       40l      156w     1898c https://streamio.htb/admin/js/lpt2
+404      GET       40l      156w     1897c https://streamio.htb/ADMIN/js/nul
+404      GET       40l      156w     1901c https://streamio.htb/admin/images/nul
+404      GET       40l      156w     1901c https://streamio.htb/Admin/images/prn
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/images/prn
+404      GET       40l      156w     1900c https://streamio.htb/admin/fonts/prn
+404      GET       40l      156w     1897c https://streamio.htb/admin/js/nul
+404      GET       40l      156w     1897c https://streamio.htb/Admin/js/prn
+404      GET       40l      156w     1897c https://streamio.htb/ADMIN/js/prn
+404      GET       40l      156w     1901c https://streamio.htb/admin/images/prn
+404      GET       40l      156w     1897c https://streamio.htb/admin/js/prn
+Configuration {
+    kind: "configuration",
+    wordlist: "/usr/share/seclists/Discovery/Web-Content/common.txt",
+    config: "/etc/feroxbuster/ferox-config.toml",
+    proxy: "",
+    replay_proxy: "",
+    server_certs: [],
+    client_cert: "",
+    client_key: "",
+    target_url: "https://streamio.htb/",
+    status_codes: [
+        100,
+        101,
+        102,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        226,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        307,
+        308,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        421,
+        422,
+        423,
+        424,
+        426,
+        428,
+        429,
+        431,
+        451,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        510,
+        511,
+        103,
+        425,
+    ],
+    replay_codes: [
+        100,
+        101,
+        102,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        226,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        307,
+        308,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        421,
+        422,
+        423,
+        424,
+        426,
+        428,
+        429,
+        431,
+        451,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        510,
+        511,
+        103,
+        425,
+    ],
+    filter_status: [],
+    client: Client {
+        accepts: Accepts,
+        proxies: [
+            Matcher,
+        ],
+        redirect_policy: "Policy(None)",
+        referer: true,
+        default_headers: {
+            "accept": "*/*",
+            "user-agent": "feroxbuster/2.13.1",
+        },
+        reqwest::config::RequestTimeout: 7s,
+    },
+    replay_client: None,
+    threads: 150,
+    timeout: 7,
+    verbosity: 0,
+    silent: false,
+    quiet: false,
+    output_level: Default,
+    auto_bail: false,
+    auto_tune: false,
+    requester_policy: Default,
+    json: false,
+    output: "streamio.txt",
+    debug_log: "",
+    user_agent: "feroxbuster/2.13.1",
+    random_agent: false,
+    redirects: false,
+    insecure: true,
+    extensions: [],
+    methods: [
+        "GET",
+    ],
+    data: [],
+    headers: {},
+    queries: [],
+    no_recursion: false,
+    extract_links: true,
+    add_slash: false,
+    stdin: false,
+    cached_stdin: [],
+    depth: 4,
+    scan_limit: 0,
+    parallel: 0,
+    rate_limit: 0,
+    filter_size: [],
+    filter_line_count: [],
+    filter_word_count: [],
+    filter_regex: [],
+    dont_filter: false,
+    resumed: false,
+    resume_from: "",
+    save_state: true,
+    time_limit: "",
+    filter_similar: [],
+    url_denylist: [],
+    regex_denylist: [],
+    scope: [
+        Url {
+            scheme: "https",
+            cannot_be_a_base: false,
+            username: "",
+            password: None,
+            host: Some(
+                Domain(
+                    "streamio.htb",
+                ),
+            ),
+            port: None,
+            path: "/",
+            query: None,
+            fragment: None,
+        },
+    ],
+    collect_extensions: false,
+    dont_collect: [
+        "woff2",
+        "woff",
+        "ttf",
+        "otf",
+        "eot",
+        "tif",
+        "tiff",
+        "ico",
+        "cur",
+        "bmp",
+        "webp",
+        "svg",
+        "png",
+        "jpg",
+        "jpeg",
+        "jfif",
+        "gif",
+        "avif",
+        "apng",
+        "pjpeg",
+        "pjp",
+        "mov",
+        "wav",
+        "mpg",
+        "mpeg",
+        "mp3",
+        "mp4",
+        "m4a",
+        "m4p",
+        "m4v",
+        "ogg",
+        "webm",
+        "ogv",
+        "oga",
+        "flac",
+        "aac",
+        "3gp",
+        "css",
+        "zip",
+        "xls",
+        "xml",
+        "gz",
+        "tgz",
+    ],
+    collect_backups: false,
+    backup_extensions: [
+        "~",
+        ".bak",
+        ".bak2",
+        ".old",
+        ".1",
+    ],
+    collect_words: false,
+    force_recursion: false,
+    update_app: false,
+    scan_dir_listings: false,
+    request_file: "",
+    protocol: "https",
+    limit_bars: 0,
+    unique: false,
+    response_size_limit: 4194304,
+}
+301      GET        2l       10w      150c https://streamio.htb/ADMIN => https://streamio.htb/ADMIN/
+301      GET        2l       10w      150c https://streamio.htb/Admin => https://streamio.htb/Admin/
+301      GET        2l       10w      151c https://streamio.htb/Images => https://streamio.htb/Images/
+200      GET      206l      430w     6434c https://streamio.htb/contact.php
+200      GET        5l      374w    21257c https://streamio.htb/js/popper.min.js
+200      GET      367l     1995w   166220c https://streamio.htb/images/contact-img.png
+200      GET      231l      571w     7825c https://streamio.htb/about.php
+200      GET      395l      915w    13497c https://streamio.htb/index.php
+200      GET      192l     1006w    82931c https://streamio.htb/images/icon.png
+200      GET      913l     5479w   420833c https://streamio.htb/images/about-img.png
+200      GET        2l     1276w    88145c https://streamio.htb/js/jquery-3.4.1.min.js
+200      GET      863l     1698w    16966c https://streamio.htb/css/style.css
+200      GET       51l      213w    19329c https://streamio.htb/images/client.jpg
+200      GET      111l      269w     4145c https://streamio.htb/login.php
+200      GET      101l      173w     1663c https://streamio.htb/css/responsive.css
+200      GET      395l      915w    13497c https://streamio.htb/
+301      GET        2l       10w      150c https://streamio.htb/admin => https://streamio.htb/admin/
+404      GET       40l      156w     1888c https://streamio.htb/aux
+403      GET       29l       92w     1233c https://streamio.htb/images/
+403      GET       29l       92w     1233c https://streamio.htb/js/
+403      GET       29l       92w     1233c https://streamio.htb/css/
+301      GET        2l       10w      157c https://streamio.htb/ADMIN/Images => https://streamio.htb/ADMIN/Images/
+301      GET        2l       10w      157c https://streamio.htb/Admin/Images => https://streamio.htb/Admin/Images/
+404      GET       40l      156w     1889c https://streamio.htb/com1
+404      GET       40l      156w     1889c https://streamio.htb/com3
+404      GET       40l      156w     1889c https://streamio.htb/com2
+404      GET       40l      156w     1889c https://streamio.htb/com4
+404      GET       40l      156w     1888c https://streamio.htb/con
+301      GET        2l       10w      157c https://streamio.htb/admin/Images => https://streamio.htb/admin/Images/
+301      GET        2l       10w      148c https://streamio.htb/css => https://streamio.htb/css/
+404      GET       40l      156w     1894c https://streamio.htb/ADMIN/aux
+404      GET       40l      156w     1894c https://streamio.htb/Admin/aux
+404      GET       40l      156w     1895c https://streamio.htb/Images/aux
+404      GET       40l      156w     1895c https://streamio.htb/images/aux
+404      GET       40l      156w     1891c https://streamio.htb/js/aux
+404      GET       40l      156w     1892c https://streamio.htb/css/aux
+404      GET       40l      156w     1895c https://streamio.htb/ADMIN/com1
+404      GET       40l      156w     1895c https://streamio.htb/ADMIN/com3
+404      GET       40l      156w     1895c https://streamio.htb/ADMIN/com4
+404      GET       40l      156w     1895c https://streamio.htb/ADMIN/com2
+404      GET       40l      156w     1895c https://streamio.htb/Admin/com4
+404      GET       40l      156w     1895c https://streamio.htb/Admin/com3
+404      GET       40l      156w     1895c https://streamio.htb/Admin/com1
+404      GET       40l      156w     1895c https://streamio.htb/Admin/com2
+404      GET       40l      156w     1894c https://streamio.htb/admin/aux
+404      GET       40l      156w     1896c https://streamio.htb/Images/com4
+404      GET       40l      156w     1896c https://streamio.htb/Images/com2
+404      GET       40l      156w     1896c https://streamio.htb/Images/com3
+404      GET       40l      156w     1896c https://streamio.htb/Images/com1
+200      GET        1l        7w     2054c https://streamio.htb/favicon.ico
+404      GET       40l      156w     1896c https://streamio.htb/images/com2
+404      GET       40l      156w     1896c https://streamio.htb/images/com1
+404      GET       40l      156w     1896c https://streamio.htb/images/com4
+404      GET       40l      156w     1896c https://streamio.htb/images/com3
+404      GET       40l      156w     1892c https://streamio.htb/js/com1
+404      GET       40l      156w     1892c https://streamio.htb/js/com4
+404      GET       40l      156w     1892c https://streamio.htb/js/com2
+404      GET       40l      156w     1892c https://streamio.htb/js/com3
+404      GET       40l      156w     1893c https://streamio.htb/css/com3
+404      GET       40l      156w     1893c https://streamio.htb/css/com1
+404      GET       40l      156w     1893c https://streamio.htb/css/com4
+404      GET       40l      156w     1893c https://streamio.htb/css/com2
+404      GET       40l      156w     1894c https://streamio.htb/ADMIN/con
+404      GET       40l      156w     1894c https://streamio.htb/Admin/con
+301      GET        2l       10w      150c https://streamio.htb/fonts => https://streamio.htb/fonts/
+404      GET       40l      156w     1895c https://streamio.htb/Images/con
+404      GET       40l      156w     1895c https://streamio.htb/images/con
+404      GET       40l      156w     1891c https://streamio.htb/js/con
+404      GET       40l      156w     1892c https://streamio.htb/css/con
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/Images/aux
+301      GET        2l       10w      154c https://streamio.htb/ADMIN/css => https://streamio.htb/ADMIN/css/
+404      GET       40l      156w     1901c https://streamio.htb/Admin/Images/aux
+301      GET        2l       10w      154c https://streamio.htb/Admin/css => https://streamio.htb/Admin/css/
+404      GET       40l      156w     1895c https://streamio.htb/admin/com2
+404      GET       40l      156w     1895c https://streamio.htb/admin/com1
+404      GET       40l      156w     1895c https://streamio.htb/admin/com3
+404      GET       40l      156w     1895c https://streamio.htb/admin/com4
+301      GET        2l       10w      151c https://streamio.htb/images => https://streamio.htb/images/
+404      GET       40l      156w     1894c https://streamio.htb/admin/con
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/Images/com1
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/Images/com2
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/Images/com3
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/Images/com4
+404      GET       40l      156w     1902c https://streamio.htb/Admin/Images/com3
+404      GET       40l      156w     1902c https://streamio.htb/Admin/Images/com1
+404      GET       40l      156w     1902c https://streamio.htb/Admin/Images/com2
+404      GET       40l      156w     1902c https://streamio.htb/Admin/Images/com4
+404      GET       40l      156w     1901c https://streamio.htb/admin/Images/aux
+301      GET        2l       10w      154c https://streamio.htb/admin/css => https://streamio.htb/admin/css/
+301      GET        2l       10w      147c https://streamio.htb/js => https://streamio.htb/js/
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/Images/con
+404      GET       40l      156w     1901c https://streamio.htb/Admin/Images/con
+404      GET       40l      156w     1889c https://streamio.htb/lpt1
+404      GET       40l      156w     1889c https://streamio.htb/lpt2
+301      GET        2l       10w      156c https://streamio.htb/ADMIN/fonts => https://streamio.htb/ADMIN/fonts/
+301      GET        2l       10w      156c https://streamio.htb/Admin/fonts => https://streamio.htb/Admin/fonts/
+404      GET       40l      156w     1902c https://streamio.htb/admin/Images/com1
+404      GET       40l      156w     1902c https://streamio.htb/admin/Images/com4
+404      GET       40l      156w     1902c https://streamio.htb/admin/Images/com3
+404      GET       40l      156w     1902c https://streamio.htb/admin/Images/com2
+403      GET        1l        1w       18c https://streamio.htb/ADMIN/index.php
+403      GET        1l        1w       18c https://streamio.htb/Admin/index.php
+404      GET       40l      156w     1901c https://streamio.htb/admin/Images/con
+301      GET        2l       10w      157c https://streamio.htb/ADMIN/images => https://streamio.htb/ADMIN/images/
+301      GET        2l       10w      157c https://streamio.htb/Admin/images => https://streamio.htb/Admin/images/
+404      GET       40l      156w     1888c https://streamio.htb/nul
+301      GET        2l       10w      156c https://streamio.htb/admin/fonts => https://streamio.htb/admin/fonts/
+301      GET        2l       10w      153c https://streamio.htb/ADMIN/js => https://streamio.htb/ADMIN/js/
+404      GET       40l      156w     1898c https://streamio.htb/ADMIN/css/aux
+301      GET        2l       10w      153c https://streamio.htb/Admin/js => https://streamio.htb/Admin/js/
+404      GET       40l      156w     1898c https://streamio.htb/Admin/css/aux
+404      GET       40l      156w     1894c https://streamio.htb/fonts/aux
+403      GET        1l        1w       18c https://streamio.htb/admin/index.php
+404      GET       40l      156w     1895c https://streamio.htb/ADMIN/lpt1
+404      GET       40l      156w     1895c https://streamio.htb/ADMIN/lpt2
+404      GET       40l      156w     1895c https://streamio.htb/Admin/lpt1
+404      GET       40l      156w     1895c https://streamio.htb/Admin/lpt2
+301      GET        2l       10w      157c https://streamio.htb/admin/images => https://streamio.htb/admin/images/
+404      GET       40l      156w     1896c https://streamio.htb/Images/lpt1
+404      GET       40l      156w     1896c https://streamio.htb/Images/lpt2
+404      GET       40l      156w     1888c https://streamio.htb/prn
+404      GET       40l      156w     1896c https://streamio.htb/images/lpt1
+404      GET       40l      156w     1896c https://streamio.htb/images/lpt2
+404      GET       40l      156w     1892c https://streamio.htb/js/lpt1
+404      GET       40l      156w     1892c https://streamio.htb/js/lpt2
+404      GET       40l      156w     1893c https://streamio.htb/css/lpt1
+404      GET       40l      156w     1893c https://streamio.htb/css/lpt2
+404      GET       40l      156w     1899c https://streamio.htb/ADMIN/css/com1
+404      GET       40l      156w     1899c https://streamio.htb/ADMIN/css/com4
+404      GET       40l      156w     1899c https://streamio.htb/ADMIN/css/com2
+404      GET       40l      156w     1899c https://streamio.htb/ADMIN/css/com3
+404      GET       40l      156w     1899c https://streamio.htb/Admin/css/com2
+404      GET       40l      156w     1899c https://streamio.htb/Admin/css/com3
+404      GET       40l      156w     1899c https://streamio.htb/Admin/css/com4
+404      GET       40l      156w     1899c https://streamio.htb/Admin/css/com1
+404      GET       40l      156w     1895c https://streamio.htb/fonts/com1
+404      GET       40l      156w     1895c https://streamio.htb/fonts/com2
+404      GET       40l      156w     1895c https://streamio.htb/fonts/com3
+404      GET       40l      156w     1895c https://streamio.htb/fonts/com4
+301      GET        2l       10w      153c https://streamio.htb/admin/js => https://streamio.htb/admin/js/
+404      GET       40l      156w     1898c https://streamio.htb/admin/css/aux
+404      GET       40l      156w     1894c https://streamio.htb/ADMIN/nul
+404      GET       40l      156w     1898c https://streamio.htb/ADMIN/css/con
+404      GET       40l      156w     1894c https://streamio.htb/Admin/nul
+404      GET       40l      156w     1898c https://streamio.htb/Admin/css/con
+404      GET       40l      156w     1894c https://streamio.htb/fonts/con
+404      GET       40l      156w     1895c https://streamio.htb/admin/lpt1
+404      GET       40l      156w     1895c https://streamio.htb/admin/lpt2
+404      GET       40l      156w     1895c https://streamio.htb/Images/nul
+404      GET       40l      156w     1895c https://streamio.htb/images/nul
+404      GET       40l      156w     1891c https://streamio.htb/js/nul
+404      GET       40l      156w     1892c https://streamio.htb/css/nul
+404      GET       40l      156w     1900c https://streamio.htb/ADMIN/fonts/aux
+404      GET       40l      156w     1900c https://streamio.htb/Admin/fonts/aux
+404      GET       40l      156w     1899c https://streamio.htb/admin/css/com2
+404      GET       40l      156w     1899c https://streamio.htb/admin/css/com3
+404      GET       40l      156w     1899c https://streamio.htb/admin/css/com1
+404      GET       40l      156w     1899c https://streamio.htb/admin/css/com4
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/Images/lpt2
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/Images/lpt1
+404      GET       40l      156w     1894c https://streamio.htb/ADMIN/prn
+404      GET       40l      156w     1902c https://streamio.htb/Admin/Images/lpt1
+404      GET       40l      156w     1902c https://streamio.htb/Admin/Images/lpt2
+404      GET       40l      156w     1894c https://streamio.htb/Admin/prn
+404      GET       40l      156w     1894c https://streamio.htb/admin/nul
+404      GET       40l      156w     1898c https://streamio.htb/admin/css/con
+404      GET       40l      156w     1895c https://streamio.htb/Images/prn
+404      GET       40l      156w     1895c https://streamio.htb/images/prn
+404      GET       40l      156w     1891c https://streamio.htb/js/prn
+404      GET       40l      156w     1892c https://streamio.htb/css/prn
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/fonts/com1
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/fonts/com4
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/fonts/com3
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/fonts/com2
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/images/aux
+404      GET       40l      156w     1901c https://streamio.htb/Admin/fonts/com3
+404      GET       40l      156w     1901c https://streamio.htb/Admin/fonts/com1
+404      GET       40l      156w     1901c https://streamio.htb/Admin/fonts/com4
+404      GET       40l      156w     1901c https://streamio.htb/Admin/fonts/com2
+404      GET       40l      156w     1901c https://streamio.htb/Admin/images/aux
+404      GET       40l      156w     1900c https://streamio.htb/admin/fonts/aux
+404      GET       40l      156w     1900c https://streamio.htb/ADMIN/fonts/con
+404      GET       40l      156w     1901c https://streamio.htb/ADMIN/Images/nul
+404      GET       40l      156w     1897c https://streamio.htb/ADMIN/js/aux
+404      GET       40l      156w     1900c https://streamio.htb/Admin/fonts/con
+404      GET       40l      156w     1897c https://streamio.htb/Admin/js/aux
+404      GET       40l      156w     1901c https://streamio.htb/Admin/Images/nul
+404      GET       40l      156w     1902c https://streamio.htb/admin/Images/lpt1
+404      GET       40l      156w     1902c https://streamio.htb/admin/Images/lpt2
+404      GET       40l      156w     1894c https://streamio.htb/admin/prn
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/images/com2
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/images/com4
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/images/com3
+404      GET       40l      156w     1902c https://streamio.htb/ADMIN/images/com1
+404      GET       40l      156w     1902c https://streamio.htb/Admin/images/com1
+404      GET       40l      156w     1902c https://streamio.htb/Admin/images/com4
+404      GET       40l      156w     1902c https://streamio.htb/Admin/images/com2
+404      GET       40l      156w     1902c https://streamio.htb/Admin/images/com3

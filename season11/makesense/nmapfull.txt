@@ -1,0 +1,36 @@
+# Nmap 7.99 scan initiated Sun Jul  5 00:34:54 2026 as: /usr/lib/nmap/nmap --privileged -sV -A -oN nmapfull.txt -p- --min-rate=1000 10.129.33.180
+Nmap scan report for 10.129.33.180
+Host is up (0.15s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT     STATE    SERVICE     VERSION
+22/tcp   open     ssh         OpenSSH 9.6p1 Ubuntu 3ubuntu13.16 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 27:c3:7d:10:17:3b:dc:29:cf:05:83:33:ab:28:d0:38 (ECDSA)
+|_  256 a3:46:f2:d7:1f:43:41:31:35:a2:88:31:ff:2a:0b:22 (ED25519)
+80/tcp   filtered http
+443/tcp  open     ssl/http    Apache httpd 2.4.58 ((Ubuntu))
+|_http-title: Agency LLC
+|_http-server-header: Apache/2.4.58 (Ubuntu)
+|_ssl-date: TLS randomness does not represent time
+|_http-trane-info: Problem with XML parsing of /evox/about
+|_http-generator: WordPress 7.0
+| ssl-cert: Subject: commonName=makesense.htb
+| Not valid before: 2026-05-29T16:37:29
+|_Not valid after:  2126-05-05T16:37:29
+| tls-alpn: 
+|_  http/1.1
+8001/tcp filtered vcom-tunnel
+Device type: general purpose|router
+Running: Linux 5.X, MikroTik RouterOS 7.X
+OS CPE: cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3
+OS details: Linux 5.0 - 5.14, MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT       ADDRESS
+1   154.34 ms 10.10.14.1
+2   154.49 ms 10.129.33.180
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jul  5 00:36:27 2026 -- 1 IP address (1 host up) scanned in 92.57 seconds

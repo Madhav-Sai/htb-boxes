@@ -1,0 +1,40 @@
+# Nmap 7.99 scan initiated Sun Jul 12 00:33:01 2026 as: /usr/lib/nmap/nmap --privileged -sV -A -vv -oN nmap.txt 10.129.37.183
+Nmap scan report for 10.129.37.183
+Host is up, received reset ttl 63 (0.15s latency).
+Scanned at 2026-07-12 00:33:01 IST for 27s
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 10.0p2 Ubuntu 5ubuntu5.4 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    syn-ack ttl 63 nginx 1.28.0 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Did not follow redirect to http://paperwork.htb/
+|_http-server-header: nginx/1.28.0 (Ubuntu)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.99%E=4%D=7/12%OT=22%CT=1%CU=33321%PV=Y%DS=2%DC=T%G=Y%TM=6A52938
+OS:0%P=aarch64-unknown-linux-gnu)SEQ(SP=104%GCD=1%ISR=10B%TI=Z%CI=Z%II=I%TS
+OS:=A)SEQ(SP=106%GCD=1%ISR=109%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=106%GCD=1%ISR=10C
+OS:%TI=Z%CI=Z%TS=A)SEQ(SP=107%GCD=1%ISR=10B%TI=Z%CI=Z%TS=A)SEQ(SP=FA%GCD=2%
+OS:ISR=FE%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M552ST11NW9%O2=M552ST11NW9%O3=M552NNT1
+OS:1NW9%O4=M552ST11NW9%O5=M552ST11NW9%O6=M552ST11)WIN(W1=FE88%W2=FE88%W3=FE
+OS:88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M552NNSNW9%CC=Y%Q=
+OS:)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W
+OS:=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+OS:T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=40%IPL=
+OS:164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 8.782 days (since Fri Jul  3 05:47:14 2026)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 1723/tcp)
+HOP RTT       ADDRESS
+1   150.65 ms 10.10.14.1
+2   150.71 ms 10.129.37.183
+
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jul 12 00:33:28 2026 -- 1 IP address (1 host up) scanned in 27.33 seconds
