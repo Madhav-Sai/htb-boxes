@@ -1,0 +1,10 @@
+{
+  "machine_id": 678,
+  "name": "VulnEscape",
+  "os": "Windows",
+  "difficulty": "Easy",
+  "filename": "VulnEscape-official-writeup.pdf",
+  "downloaded_at_unix": 1784571487,
+  "sha256": "a8510b00c0101c4aa049993da1090f502af400b15e6f3026e68d8b8c9f799295",
+  "size_bytes": 9052657
+}

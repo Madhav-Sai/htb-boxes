@@ -1,0 +1,10 @@
+{
+  "machine_id": 20,
+  "name": "Joker",
+  "os": "Linux",
+  "difficulty": "Hard",
+  "filename": "Joker-official-writeup.pdf",
+  "downloaded_at_unix": 1784569299,
+  "sha256": "1bafc01f8824bcbff7bdc75e22f415bdfb8036d602d8a2b8acffe32bfa9dd589",
+  "size_bytes": 485383
+}

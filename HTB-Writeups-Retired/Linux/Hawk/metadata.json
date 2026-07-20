@@ -1,0 +1,10 @@
+{
+  "machine_id": 146,
+  "name": "Hawk",
+  "os": "Linux",
+  "difficulty": "Medium",
+  "filename": "Hawk-official-writeup.pdf",
+  "downloaded_at_unix": 1784569016,
+  "sha256": "d33be61b90f4c97c99d8f1006990ebbb9b2a143b7417e90a9e0dd8d46b703550",
+  "size_bytes": 2100622
+}

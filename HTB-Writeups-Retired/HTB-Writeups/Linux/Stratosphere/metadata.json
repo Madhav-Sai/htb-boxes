@@ -1,0 +1,10 @@
+{
+  "machine_id": 129,
+  "name": "Stratosphere",
+  "os": "Linux",
+  "difficulty": "Medium",
+  "filename": "Stratosphere-official-writeup.pdf",
+  "downloaded_at_unix": 1784571033,
+  "sha256": "f219f13872fa6033938f90b5f8f83c34bde447bc7bb154ef65544a156a5d2622",
+  "size_bytes": 395265
+}

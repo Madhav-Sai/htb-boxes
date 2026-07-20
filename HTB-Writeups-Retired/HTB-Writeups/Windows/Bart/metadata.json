@@ -1,0 +1,10 @@
+{
+  "machine_id": 128,
+  "name": "Bart",
+  "os": "Windows",
+  "difficulty": "Medium",
+  "filename": "Bart-official-writeup.pdf",
+  "downloaded_at_unix": 1784566578,
+  "sha256": "d4422e5759ae7d2dfeb7fd569e4c24afa85c4c8f7113a234462dd5e5f6a02871",
+  "size_bytes": 682492
+}

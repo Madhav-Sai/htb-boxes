@@ -1,0 +1,10 @@
+{
+  "machine_id": 200,
+  "name": "Rope",
+  "os": "Linux",
+  "difficulty": "Insane",
+  "filename": "Rope-official-writeup.pdf",
+  "downloaded_at_unix": 1784570519,
+  "sha256": "fe366827429089e316f5a821039ddd934982b1d7d25900b6ec53f2a7b52876c6",
+  "size_bytes": 4103347
+}

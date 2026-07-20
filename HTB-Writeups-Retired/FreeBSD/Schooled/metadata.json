@@ -1,0 +1,10 @@
+{
+  "machine_id": 335,
+  "name": "Schooled",
+  "os": "FreeBSD",
+  "difficulty": "Medium",
+  "filename": "Schooled-official-writeup.pdf",
+  "downloaded_at_unix": 1784570627,
+  "sha256": "8400fd78bb2b2f4dcf290fd5e1f432c37f057e650ef131767c60fab996585e14",
+  "size_bytes": 25408751
+}

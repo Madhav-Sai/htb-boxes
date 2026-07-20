@@ -1,0 +1,10 @@
+{
+  "machine_id": 190,
+  "name": "Luke",
+  "os": "FreeBSD",
+  "difficulty": "Medium",
+  "filename": "Luke-official-writeup.pdf",
+  "downloaded_at_unix": 1784569466,
+  "sha256": "1ae19f29aba6017cc0ef5b9df9b736ba0c8e482856b21f22b52bf6ab639243e5",
+  "size_bytes": 716437
+}

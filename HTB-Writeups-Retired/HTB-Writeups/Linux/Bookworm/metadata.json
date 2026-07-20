@@ -1,0 +1,10 @@
+{
+  "machine_id": 544,
+  "name": "Bookworm",
+  "os": "Linux",
+  "difficulty": "Insane",
+  "filename": "Bookworm-official-writeup.pdf",
+  "downloaded_at_unix": 1784566725,
+  "sha256": "47ac4987a426b19c9ac3ac304b70c7fe75547f108fb71f1c91facb9386d6df44",
+  "size_bytes": 1716236
+}

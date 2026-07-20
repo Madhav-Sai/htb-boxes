@@ -1,0 +1,10 @@
+{
+  "machine_id": 322,
+  "name": "CrossFitTwo",
+  "os": "OpenBSD",
+  "difficulty": "Insane",
+  "filename": "CrossFitTwo-official-writeup.pdf",
+  "downloaded_at_unix": 1784567812,
+  "sha256": "3c29451650018d4c108c786565266bfef82896af82b4ac24c758ab56c604d626",
+  "size_bytes": 5116427
+}

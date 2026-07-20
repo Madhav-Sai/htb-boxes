@@ -1,0 +1,10 @@
+{
+  "machine_id": 1,
+  "name": "Lame",
+  "os": "Linux",
+  "difficulty": "Easy",
+  "filename": "Lame-official-writeup.pdf",
+  "downloaded_at_unix": 1784569369,
+  "sha256": "9923bfeffc01138dfa9efcdcd1520cf490a6ecf7c28ead8031bbc1da1521040f",
+  "size_bytes": 175627
+}

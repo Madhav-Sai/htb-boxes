@@ -1,0 +1,10 @@
+{
+  "machine_id": 416,
+  "name": "Backdoor",
+  "os": "Linux",
+  "difficulty": "Easy",
+  "filename": "Backdoor-official-writeup.pdf",
+  "downloaded_at_unix": 1784566505,
+  "sha256": "a22b7c8e9dcb9ea22699eb152e14695f69571b875d42adb2ca382ce628b9bfe7",
+  "size_bytes": 7950441
+}

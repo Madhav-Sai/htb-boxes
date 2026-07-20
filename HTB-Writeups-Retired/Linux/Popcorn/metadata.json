@@ -1,0 +1,10 @@
+{
+  "machine_id": 4,
+  "name": "Popcorn",
+  "os": "Linux",
+  "difficulty": "Medium",
+  "filename": "Popcorn-official-writeup.pdf",
+  "downloaded_at_unix": 1784570197,
+  "sha256": "41efb94fc60b0b177bfcf0882eccf9af4ba2fd3f9916735d4b292dfed6cf9dcc",
+  "size_bytes": 488281
+}

@@ -1,0 +1,10 @@
+{
+  "machine_id": 648,
+  "name": "Titanic",
+  "os": "Linux",
+  "difficulty": "Easy",
+  "filename": "Titanic-official-writeup.pdf",
+  "downloaded_at_unix": 1784571222,
+  "sha256": "894dea6d025a6417c6f7a75cea4b646fc96da05c9e48323cd5ce5567f5c4f888",
+  "size_bytes": 3964778
+}

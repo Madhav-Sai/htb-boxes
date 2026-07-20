@@ -1,0 +1,35 @@
+# Nmap 7.99 scan initiated Sun Jul 19 00:40:13 2026 as: /usr/lib/nmap/nmap --privileged -sV -A -p- -oN bedside.nmap.txt --min-rate=2000 10.129.42.44
+Nmap scan report for 10.129.42.44
+Host is up (0.16s latency).
+Not shown: 65532 closed tcp ports (reset)
+PORT     STATE    SERVICE VERSION
+22/tcp   open     ssh     OpenSSH 10.0p2 Debian 7+deb13u4 (protocol 2.0)
+80/tcp   open     http    Apache httpd 2.4.68
+|_http-title: Did not follow redirect to http://bedside.htb/
+|_http-server-header: Apache/2.4.68 (Debian)
+3000/tcp filtered ppp
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.99%E=4%D=7/19%OT=22%CT=1%CU=30437%PV=Y%DS=2%DC=T%G=Y%TM=6A5BCFD
+OS:1%P=aarch64-unknown-linux-gnu)SEQ(SP=100%GCD=1%ISR=106%TI=Z%CI=Z%II=I%TS
+OS:=21)SEQ(SP=101%GCD=1%ISR=102%TI=Z%CI=Z%II=I%TS=21)SEQ(SP=103%GCD=1%ISR=1
+OS:10%TI=Z%CI=Z%II=I%TS=22)SEQ(SP=107%GCD=1%ISR=10C%TI=Z%CI=Z%II=I%TS=21)SE
+OS:Q(SP=FC%GCD=1%ISR=110%TI=Z%CI=Z%II=I%TS=22)OPS(O1=M552ST11NW7%O2=M552ST1
+OS:1NW7%O3=M552NNT11NW7%O4=M552ST11NW7%O5=M552ST11NW7%O6=M552ST11)WIN(W1=FE
+OS:88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M5
+OS:52NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4
+OS:(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%
+OS:F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=N)U1(R=
+OS:Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%
+OS:T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: Host: default; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   160.97 ms 10.10.14.1
+2   161.05 ms 10.129.42.44
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jul 19 00:41:13 2026 -- 1 IP address (1 host up) scanned in 60.46 seconds

@@ -1,0 +1,10 @@
+{
+  "machine_id": 17,
+  "name": "Brainfuck",
+  "os": "Linux",
+  "difficulty": "Insane",
+  "filename": "Brainfuck-official-writeup.pdf",
+  "downloaded_at_unix": 1784566752,
+  "sha256": "f35214fde9161d18dfdc1a34371c5b49bda51e81998921671e6850984b34a5fc",
+  "size_bytes": 524011
+}

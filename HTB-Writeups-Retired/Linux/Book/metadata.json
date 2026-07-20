@@ -1,0 +1,10 @@
+{
+  "machine_id": 230,
+  "name": "Book",
+  "os": "Linux",
+  "difficulty": "Medium",
+  "filename": "Book-official-writeup.pdf",
+  "downloaded_at_unix": 1784566717,
+  "sha256": "3eff8997e13d2da3b13ab2e103847c9627a5f3e09c55fbb0470d6f118f54e60f",
+  "size_bytes": 3996086
+}

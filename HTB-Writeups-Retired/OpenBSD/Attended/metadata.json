@@ -1,0 +1,10 @@
+{
+  "machine_id": 307,
+  "name": "Attended",
+  "os": "OpenBSD",
+  "difficulty": "Insane",
+  "filename": "Attended-official-writeup.pdf",
+  "downloaded_at_unix": 1784566455,
+  "sha256": "604fa5f70b09863b4f8cddbefbd2be8894255a8d6bdba7b2ab19eef9743a7136",
+  "size_bytes": 12045284
+}
